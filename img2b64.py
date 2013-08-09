@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 import sys
 import os
 import base64
