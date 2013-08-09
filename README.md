@@ -15,9 +15,15 @@ To use simply pass a directory containing images as the first argument to the sc
 
 		python img2b64.py /Users/sam/SomeDir
 
-img2b64.py will convert all jpg and png in the directory into base64 encoded strings and save them in a single file named `base64imgs.json`. 
+img2b64.py will convert all jpg and png in the directory into base64 encoded strings and save them in a single file named `base64imgs.json`.
 
-Each attribute in the `base64imgs.json` file will be a image file name like _"photo1.jpg"_ and the value of the property will be a object congaing two attributes `"base64"` will contain the images encoded as a base64 string and `"format"` for example.
+Optionally the directory in which to to write the `base64imgs.json` file can be specified by passing the output directory path as the 2nd argument. For example:
+
+	python img2b64.py /Users/sam/SomeDir /Users/sam/SomeOtherDir
+
+
+
+Each attribute in the `base64imgs.json` file will be a image file name like _"photo1.jpg"_ and the value of the property will be a object containing two attributes `"base64"` which will contain the base64 encoded as string and `"format"` contain the file type i.e. 'jpg' or 'png' for example.
 
 	{
 		"photo1.jpg": {
